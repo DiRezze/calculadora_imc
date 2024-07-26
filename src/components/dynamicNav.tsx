@@ -1,5 +1,31 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
+
+const scrollTo = (sectionId:string) =>{
+    document.getElementById(sectionId)?.scrollIntoView({behavior: 'smooth'});
+}
+
+const NavLinks: React.FC = () =>{
+
+    const links = [
+        { name: 'Início', sectionId: 'home'},
+        { name: 'Calculadora', sectionId: 'calculator'},
+        { name: 'Informações', sectionId: 'info'},
+        { name: 'Referências', sectionId: 'ref'}
+    ];
+
+    return(
+        <ul>
+            {links.map(link=>(
+                <li id={link.sectionId} onClick={( ) => scrollTo(link.sectionId)}>
+                    {link.name}
+                </li>
+            ))}
+        </ul>
+
+    );
+
+}
 
 const DynamicNav: React.FC = ( ) =>{
     const [viewWidth, setViewWidth] = useState<number>(window.innerWidth);
@@ -16,20 +42,18 @@ const DynamicNav: React.FC = ( ) =>{
 
     return(
         <nav>
-            {viewWidth >= 350 ?(
+            {viewWidth >= 450 ?(
                 <>
                     <h1>Calculadora de IMC</h1>
-                    <ul>
-                        <li>Início</li>
-                        <li>Calculadora</li>
-                        <li>Informações</li>
-                        <li>Referências</li>
-                    </ul>
+                    <NavLinks />
                 </>
             ):(
-                <button>
-                    <IoMenu />
-                </button>
+                <>
+                    <button className="dropdown-button">
+                        <IoMenu />
+                    </button>
+                    <NavLinks />
+                </>
             )}
         </nav>
     );
