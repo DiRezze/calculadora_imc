@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
+import { scrollTo } from "../script/scrollTo";
 
-const scrollTo = (sectionId:string) =>{
-    document.getElementById(sectionId)?.scrollIntoView({behavior: 'smooth'});
-}
 
 const NavLinks: React.FC = () =>{
 
