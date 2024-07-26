@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
 import { scrollTo } from "../script/scrollTo";
+import brand from "../assets/brand.svg";
 
 
 const NavLinks: React.FC = () =>{
@@ -13,10 +14,12 @@ const NavLinks: React.FC = () =>{
     ];
 
     return(
-        <ul>
+        <ul className="navbar-nav custom-nav me-auto mb-2 mb-lg-0">
             {links.map(link=>(
-                <li id={link.sectionId} onClick={( ) => scrollTo(link.sectionId)}>
-                    {link.name}
+                <li key={link.sectionId} onClick={( ) => scrollTo(link.sectionId)} className="nav-item">
+                    <span className="nav-link">
+                        {link.name}
+                    </span>
                 </li>
             ))}
         </ul>
@@ -44,20 +47,22 @@ const DynamicNav: React.FC = ( ) =>{
     },[]);
 
     return(
-        <nav>
-            {viewWidth >= 450 ?(
-                <>
-                    <h1>Calculadora de IMC</h1>
-                    <NavLinks />
-                </>
-            ):(
-                <>
-                    <button className="dropdown-button">
-                        <IoMenu />
-                    </button>
-                    <NavLinks />
-                </>
-            )}
+        <nav className="navbar navbar-expand-lg bg-body-tertiary flex-nowrap">
+            <div className="container-fluid">
+                {viewWidth >= 450 ?(
+                    <>
+                        <img src={brand} alt="Calculadora de IMC" width="30" height="24" className="d-inline-block align-text-top" />
+                        <NavLinks />
+                    </>
+                ):(
+                    <>
+                        <button className="dropdown-button">
+                            <IoMenu />
+                        </button>
+                        <NavLinks />
+                    </>
+                )}
+            </div>
         </nav>
 
     );
