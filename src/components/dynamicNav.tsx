@@ -28,16 +28,21 @@ const NavLinks: React.FC = () =>{
 }
 
 const DynamicNav: React.FC = ( ) =>{
+
     const [viewWidth, setViewWidth] = useState<number>(window.innerWidth);
 
     useEffect (( )=>{
+
         const handleResize = ( ) =>{
             setViewWidth(window.innerWidth);
         }
+
         window.addEventListener("resize", handleResize);
+
         return ( ) =>{
             window.removeEventListener("resize", handleResize);
         };
+        
     },[]);
 
     return(
@@ -56,6 +61,7 @@ const DynamicNav: React.FC = ( ) =>{
                 </>
             )}
         </nav>
+
     );
 
 }
