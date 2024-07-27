@@ -1,4 +1,3 @@
-
 function getValue(inputId:string): number | null{
 
     const inputField = document.getElementById(inputId) as HTMLInputElement | null;
@@ -19,9 +18,9 @@ function calculateBMI( ) {
         const BMIValue = (weight / height**2);
         return BMIValue;
     }
-    
+
     return null;
 
 }
 
-export default calculateBMI; getValue;
+export default { calculateBMI, getValue };
