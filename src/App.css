@@ -6,7 +6,12 @@
   width: 100vw;
   height: 100vh;
 }
+#home{
+  padding-top: 72px;
+}
 .container-fluid, .navbar{
+  position: fixed !important;
+  top: 0;
   padding: 0 !important;
   flex-wrap: nowrap !important;
 }
@@ -28,4 +33,31 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+}
+.calculator-container{
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-container{
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.side-image-container img{
+  flex: 1;
+  width: 400px;
+  margin: 1rem;
+}
+.calculator-container{
+  max-width: 900px;
+  height: max-content;
+  width: 95vw;
+  border: solid #ddd 1px;
+  border-radius: 8px;
+}
+.calculator-text{
+  width: 90% !important;
 }

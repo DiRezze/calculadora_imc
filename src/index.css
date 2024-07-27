@@ -13,6 +13,7 @@ body {
   min-width: 300px;
   width: 100svw;
   min-height: 100svh;
+  overflow-x: hidden;
 }
 nav{
   position: absolute;
@@ -20,11 +21,17 @@ nav{
   width: 100vw;
   max-height: 40px;
 }
+form{
+  width: 75%;
+}
 main, section{
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+}
+section{
+  padding-bottom: 2rem;
 }
 button {
   border-radius: 8px;
