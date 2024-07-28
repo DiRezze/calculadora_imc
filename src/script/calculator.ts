@@ -16,7 +16,8 @@ export function calculateBMI( ) {
 
     if(height && weight){
         const BMIValue = (weight / height**2);
-        return BMIValue;
+        const BMIRounded = parseFloat(BMIValue.toFixed(1));
+        return BMIRounded;
     }
 
     return null;
