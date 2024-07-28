@@ -1,8 +1,32 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import sideImage from "../assets/sideImage.svg"
-import BmiChart from "./graph";
+import Results from "./results";
+import { calculateBMI } from "../script/calculator";
 
 const CalculatorApp: React.FC = () =>{
+
+    const [bmi, setBmi] = useState<number|null>(null);
+    const [gender, setGender] = useState<string>('');
+    const resultsRef = useRef<HTMLDivElement>(null);
+
+    const handleCalculate = (e: React.MouseEvent<HTMLButtonElement>) =>{
+
+        e.preventDefault();
+
+        const selectedGender = document.querySelector('input[name="radioGender"]:checked') as HTMLInputElement;
+        const genderValue = selectedGender ? selectedGender.id : '';
+
+        const calculatedBmi = calculateBMI();
+
+        setBmi(calculatedBmi);
+        setGender(genderValue === 'radioMasc' ? 'Masculino' : 'Feminino');
+
+        if (resultsRef.current) {
+            resultsRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+    }
+
     return(
         <section id="calculator">
             <div className="d-flex calculator-container">
@@ -13,11 +37,25 @@ const CalculatorApp: React.FC = () =>{
                     <form>
                         <div>
                             <div className="form-floating mb-3 w-100">
-                                <input type="number" className="form-control calculator-text" id="heightInput" placeholder="Ex.: 180cm" />
-                                <label htmlFor="floatingInput">Altura (Centímetros)</label>
+                                <input 
+                                    type="number" 
+                                    className="form-control calculator-text" 
+                                    id="heightInput" 
+                                    placeholder="Ex.: 1.80m" 
+                                    step={0.001} 
+                                    min={0.001}
+                                />
+                                <label htmlFor="floatingInput">Altura (Metros)</label>
                             </div>
                             <div className="form-floating mb-3 d-flex w-100">
-                                <input type="number" className="form-control calculator-text" id="weightInput" placeholder="Ex.: 70Kg" />
+                                <input 
+                                    type="number" 
+                                    className="form-control calculator-text" 
+                                    id="weightInput" 
+                                    placeholder="Ex.: 70Kg"
+                                    step={0.001} 
+                                    min={0}
+                                />
                                 <label htmlFor="floatingInput">Peso (Em Kg)</label>
                             </div>
                         </div>
@@ -37,16 +75,18 @@ const CalculatorApp: React.FC = () =>{
                         </div>
                         <hr />
                         <button 
-                            type="submit" 
                             id="calculatorSubmit" 
                             className="btn btn-primary btn-lg"
+                            onClick={handleCalculate}
                         >
                             Calcular
                         </button>
                     </form>
                 </div>
             </div>
-            <BmiChart />
+            <div ref={resultsRef}>
+                {bmi !== null && <Results bmi={bmi} gender={gender} />}
+            </div>
         </section>
     )
 }

@@ -4,7 +4,8 @@ import CalculatorApp from './components/calculator'
 import DynamicNav from './components/dynamicNav'
 import Home from './components/home'
 
-function App() {
+const App: React.FC = () => {
+
   return (
     <>
       <DynamicNav />

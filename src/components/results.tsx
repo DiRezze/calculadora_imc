@@ -1,18 +1,21 @@
-import { calculateBMI } from "../script/calculator"
 import { classifyBMI } from "../script/classifyBMI";
 import BmiChart from "./graph";
 
-const Results = ( ) => {
+interface ResultsProps {
+    bmi: number;
+    gender: string;
+}
 
-    const BMIValue = calculateBMI();
-    const classification = classifyBMI(BMIValue);
-    
-    if (BMIValue){
+const Results: React.FC<ResultsProps>  = ({ bmi, gender }) => {
+
+    const classification = classifyBMI(bmi);
+
+    if (bmi){
         return(
-            <div className="results">
+            <div className="results" id='results'>
                 <div>
-                    <h2>Seu IMC é {BMIValue}</h2>
-                    <h3>Um índice que é considerado <span>{classification}</span>. </h3>
+                    <h2>Seu IMC é {bmi}</h2>
+                    <h3>Um índice que é considerado <span>{classification}</span> para uma pessoa do gênero {gender}. </h3>
                 </div>
                 <button>Saiba mais</button>
                 <BmiChart />
