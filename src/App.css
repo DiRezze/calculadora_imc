@@ -70,14 +70,15 @@
 /*Information*/
 .info{
   background: var(--main-gradient);
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   border-radius: 92px 0;
   color: #fff;
 }
 .info-card{
+  max-width: 400px;
+  width: 90%;
   text-align: justify;
   border-radius: 12px;
-  max-width: 400px;
   padding: 1rem;
   margin: 0.5rem;
   background-color: #fffcfd;

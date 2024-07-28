@@ -4,7 +4,7 @@ const Information = ( ) =>{
     return(
         <section id='info' className="info">
             <h2 className="info-main-title">Informações</h2>
-            <div className=" d-flex flex-row">
+            <div className="d-flex flex-row flex-wrap align-itens-center justify-content-center">
                 
                 <div className="d-flex flex-column justify-content-start align-itens-center info-card">
                     <h3 className="info-title">O que é IMC?</h3>
