@@ -9,7 +9,7 @@ function getValue(inputId:string): number | null{
 
 }
 
-function calculateBMI( ) {
+export function calculateBMI( ) {
 
     const height = getValue('heightInput');
     const weight = getValue('weightInput');
@@ -22,5 +22,3 @@ function calculateBMI( ) {
     return null;
 
 }
-
-export default { calculateBMI, getValue };

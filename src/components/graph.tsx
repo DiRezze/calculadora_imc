@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 class ApexCharts extends React.Component{
     constructor(props:object){
@@ -48,7 +48,9 @@ class ApexCharts extends React.Component{
 
 
                 }
+            }
         }
     }
 }
-}
+
+export default ApexCharts;
