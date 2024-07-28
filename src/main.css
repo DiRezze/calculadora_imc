@@ -24,7 +24,7 @@ nav{
 form{
   width: 75%;
 }
-main, section{
+main, section, header, footer{
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
