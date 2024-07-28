@@ -69,3 +69,21 @@
 .navbar{
   background-color: white !important;
 }
+
+/*Footer*/
+.footer-info{
+  justify-content: center;
+  flex-flow: row wrap;
+  color: #333;
+}
+.footer-info a{
+  text-decoration: none;
+  color: #333;
+  padding-right: 0.5rem;
+}
+.footer-info a:hover{
+  color: #000;
+}
+.github-link{
+  align-items: center;
+}

@@ -22,7 +22,7 @@ const CalculatorApp: React.FC = () =>{
         setGender(genderValue === 'radioMasc' ? 'Masculino' : 'Feminino');
 
         if (resultsRef.current) {
-            resultsRef.current.scrollIntoView({ behavior: 'smooth', block: 'center',});
+            resultsRef.current.scrollIntoView({ behavior: 'smooth' });
         }
         
     }
