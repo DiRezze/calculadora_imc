@@ -28,9 +28,6 @@
 .nav-item:hover{
   background-color: #e6e6e6;
 }
-.home-question{
-  font-size: 1.2rem;
-}
 .custom-nav {
   display: flex;
   overflow-x: auto;
@@ -70,8 +67,33 @@
   background-color: white !important;
 }
 
+/*Information*/
+.info{
+  background: var(--main-gradient);
+  padding: 2rem 1rem;
+  border-radius: 92px 0;
+  color: #fff;
+}
+.info-card{
+  text-align: justify;
+  border-radius: 12px;
+  max-width: 400px;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: #fffcfd;
+  color: #111;
+}
+.info-main-title{
+  font-size: 2.5rem;
+}
+.info-title{
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 /*Footer*/
 .footer-info{
+  padding: 2rem 0 1rem 0;
   justify-content: center;
   flex-flow: row wrap;
   color: #333;
