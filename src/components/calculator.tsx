@@ -1,5 +1,6 @@
 import React from "react";
 import sideImage from "../assets/sideImage.svg"
+import BmiChart from "./graph";
 
 const CalculatorApp: React.FC = () =>{
     return(
@@ -45,6 +46,7 @@ const CalculatorApp: React.FC = () =>{
                     </form>
                 </div>
             </div>
+            <BmiChart />
         </section>
     )
 }

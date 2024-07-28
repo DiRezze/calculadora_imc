@@ -1,56 +1,71 @@
-import React, { Component } from "react";
+import React from "react";
+import ReactApexChart from "react-apexcharts";
 
-class ApexCharts extends React.Component{
-    constructor(props:object){
-        super(props);
+const BmiChart: React.FC = () => {
+    const series =[{
+        name: 'IMC',
+        data: [16, 23, 24, 25, 26, 27]
+    }];
+    const options = {
 
-        this.state = {
+        chart: {
+          height: 350,
+          id: 'BMIChart',
+        },
 
-            series: [{
-                name: "IMC",
-                data: [15, 20, 24.9, 29.9, 39.9, 43, 50 ]
-            }],
-            options: {
-                chart: {
-                  height: 350,
-                  type: 'line',
-                  id: 'BMIGraph',
-                  zoom:{
-                    enable: false,
-                  }
-                },
-                dataLabels: {
-                    enabled: false
-                },
-                grid: {
-                    row:{
-                        colors: ['#f3f3f3', 'transparent'],
-                        opacity: 0.5
+        annotations: {
+
+            yaxis: [{
+                y: 15,
+                y2: 20,
+                fillColor: '#0000FF',
+                opacity: 0.5,
+                label: {
+                    borderColor: '#B3F7CA',
+                    style: {
+                        fontSize: '12px',
+                        color: '#fff',
+                        background: '#00E396',
                     },
-                },
-                xaxis: {
-                    categories: []
-                },
-                anotations: {
-                    xaxis: [{
-                        x: new Date('23 Nov 2017').getTime(),
-                        strokeDashArray: 0,
-                        borderColor: '#775DD0',
-                        label: {
-                          borderColor: '#775DD0',
-                          style: {
-                            color: '#fff',
-                            background: '#775DD0',
-                          },
-                          text: 'Anno Test',
-                        }
-                    }],
-
+                    offsetY: -10,
+                    text: 'Abaixo do Normal',
 
                 }
-            }
+            }],
+
+            points: [{
+                x: 1,
+                y: 8607.55,
+                  marker: {
+                    size: 8,
+                    fillColor: '#fff',
+                    strokeColor: 'red',
+                    radius: 2,
+                    cssClass: 'apexcharts-custom-class'
+                  },
+                  label: {
+                    borderColor: '#FF4560',
+                    offsetY: 0,
+                    style: {
+                      color: '#fff',
+                      background: '#FF4560',
+                    },
+              
+                    text: 'Você',
+                  }
+            }]
+
+        },
+
+        xaxis: {
+          categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May']
         }
-    }
+    };
+    return (
+        <div>
+          <ReactApexChart options={options} series={series} type="line" />
+        </div>
+    );
 }
 
-export default ApexCharts;
+export default BmiChart;

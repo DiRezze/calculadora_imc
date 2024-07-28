@@ -47,7 +47,7 @@ const DynamicNav: React.FC = ( ) =>{
     },[]);
 
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary flex-nowrap">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary flex-nowrap nav-container">
             <div className="container-fluid">
                 {viewWidth >= 450 ?(
                     <>
