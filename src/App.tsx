@@ -3,6 +3,7 @@ import './App.css'
 import CalculatorApp from './components/calculator'
 import DynamicNav from './components/dynamicNav'
 import Home from './components/home'
+import Footer from './components/footer';
 
 const App: React.FC = () => {
 
@@ -13,6 +14,7 @@ const App: React.FC = () => {
       <main>
         <CalculatorApp />
       </main>
+      <Footer />
     </>
   )
 }
