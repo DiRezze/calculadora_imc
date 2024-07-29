@@ -35,52 +35,55 @@ const CalculatorApp: React.FC = () =>{
                 </div>
                 <div className="form-container">
                     <form>
-                        <div>
-                            <div className="form-floating mb-3 w-100">
-                                <input 
-                                    type="number" 
-                                    className="form-control calculator-text" 
-                                    id="heightInput" 
-                                    placeholder="Ex.: 1.80m" 
-                                    step={0.001} 
-                                    min={0.001}
-                                />
-                                <label htmlFor="floatingInput">Altura (Metros)</label>
+                        <div className="d-flex flex-column align-itens-center justify-content-center">
+
+                            <div>
+                                <div className="form-floating mb-3 w-100 ">
+                                    <input 
+                                        type="number" 
+                                        className="form-control calculator-text" 
+                                        id="heightInput" 
+                                        placeholder="Ex.: 1.80m" 
+                                        step={0.001} 
+                                        min={0.001}
+                                    />
+                                    <label htmlFor="floatingInput">Altura (Metros)</label>
+                                </div>
+                                <div className="form-floating mb-3 d-flex w-100">
+                                    <input 
+                                        type="number" 
+                                        className="form-control calculator-text" 
+                                        id="weightInput" 
+                                        placeholder="Ex.: 70Kg"
+                                        step={0.001} 
+                                        min={0}
+                                    />
+                                    <label htmlFor="floatingInput">Peso (Em Kg)</label>
+                                </div>
                             </div>
-                            <div className="form-floating mb-3 d-flex w-100">
-                                <input 
-                                    type="number" 
-                                    className="form-control calculator-text" 
-                                    id="weightInput" 
-                                    placeholder="Ex.: 70Kg"
-                                    step={0.001} 
-                                    min={0}
-                                />
-                                <label htmlFor="floatingInput">Peso (Em Kg)</label>
+                            <div className="d-flex flex-row align-itens-center justify-content-left flex-wrap">
+                                <div className="form-check ms-2">
+                                    <input className="form-check-input" type="radio" name="radioGender" id="radioMasc" />
+                                    <label className="form-check-label" htmlFor="radioMasc">
+                                        Masculino
+                                    </label>
+                                </div>
+                                <div className="form-check ms-2">
+                                    <input className="form-check-input" type="radio" name="radioGender" id="radioFem" />
+                                    <label className="form-check-label" htmlFor="radioFem">
+                                        Feminino
+                                    </label>
+                                </div>
                             </div>
+                            <hr />
+                            <button 
+                                id="calculatorSubmit" 
+                                className="btn btn-primary btn-lg submit-calculator"
+                                onClick={handleCalculate}
+                            >
+                                Calcular
+                            </button>
                         </div>
-                        <div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="radio" name="radioGender" id="radioMasc" />
-                                <label className="form-check-label" htmlFor="radioMasc">
-                                    Masculino
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input className="form-check-input" type="radio" name="radioGender" id="radioFem" />
-                                <label className="form-check-label" htmlFor="radioFem">
-                                    Feminino
-                                </label>
-                            </div>
-                        </div>
-                        <hr />
-                        <button 
-                            id="calculatorSubmit" 
-                            className="btn btn-primary btn-lg"
-                            onClick={handleCalculate}
-                        >
-                            Calcular
-                        </button>
                     </form>
                 </div>
             </div>
