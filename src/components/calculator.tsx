@@ -29,11 +29,11 @@ const CalculatorApp: React.FC = () =>{
 
     return(
         <section id="calculator">
-            <div className="d-flex calculator-container">
+            <div className="d-flex calculator-container flex-row flex-wrap align-itens-center justify-content-space-between">
                 <div className="side-image-container">
                     <img src={sideImage} />
                 </div>
-                <div className="form-container">
+                <div className="d-flex flex-column justify-content-center align-itens-center flex-wrap form-container">
                     <form>
                         <div className="d-flex flex-column align-itens-center justify-content-center">
 
