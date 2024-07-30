@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IoMenu } from "react-icons/io5";
 import { scrollTo } from "../script/scrollTo";
-import brand from "../assets/brand.svg";
+import { FaCalculator } from "react-icons/fa";
 
 
 const NavLinks: React.FC = () =>{
@@ -51,7 +51,7 @@ const DynamicNav: React.FC = ( ) =>{
             <div className="container-fluid">
                 {viewWidth >= 450 ?(
                     <>
-                        <img src={brand} alt="Calculadora de IMC" width="30" height="24" className="d-inline-block align-text-top" />
+                        <FaCalculator />
                         <NavLinks />
                     </>
                 ):(

@@ -6,7 +6,7 @@ const Header:React.FC = () => {
         <header id='home'>
             <h1 className="main-title">Calculadora de IMC</h1>
             <div 
-                className="d-flex f-row justify-content-center align-items-center home-question"
+                className="d-flex f-row justify-content-center align-items-center home-question mt-3 mb-3"
                 onClick={( ) => scrollTo('info')}
             >
                 <FiInfo className="me-2" />
