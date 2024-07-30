@@ -6,12 +6,10 @@
   --tertiary-color: #9971d3;
   --main-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color))
 }
+
 #home{
-  padding-top: 72px;
+  padding: 4.5rem 0 3rem 0;
   background: var(--main-gradient);
-}
-#calculator{
-  margin-top: 2rem;
 }
 .container-fluid, .navbar{
   position: fixed !important;
@@ -40,13 +38,6 @@
   justify-content: space-between;
   align-items: center;
 }
-.form-container{
-  flex: 1;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-}
 /*Header CSS*/
 .main-title, .home-question{
   color: white;
@@ -67,6 +58,13 @@
   width: 95vw;
   border: solid #ddd 1px;
   border-radius: 8px;
+}
+.form-container{
+  flex: 1;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 .side-image-container{
   max-width: 400px;

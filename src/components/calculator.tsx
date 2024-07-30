@@ -28,7 +28,7 @@ const CalculatorApp: React.FC = () =>{
     }
 
     return(
-        <section id="calculator">
+        <section id="calculator" className="mt-4">
             <div className="d-flex calculator-container flex-row flex-wrap align-itens-center justify-content-space-between">
                 <div className="side-image-container">
                     <img src={sideImage} />
