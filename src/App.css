@@ -51,6 +51,13 @@
   justify-content: center;
   align-items: center;
 }
+/*Header CSS*/
+.main-title, .home-question{
+  color: white;
+}
+.home-question{
+  font-weight: 400;
+}
 
 /*Calculator & Results*/
 .calculator-container{
