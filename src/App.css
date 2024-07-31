@@ -47,6 +47,8 @@
   cursor: pointer;
   font-weight: 400;
   animation: ease-in-out all 0.3s;
+  align-items: center;
+  justify-content: center;
 }
 .home-question:hover{
   transform: scale(1.01);
