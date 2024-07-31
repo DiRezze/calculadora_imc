@@ -10,7 +10,6 @@ const NavLinks: React.FC = () =>{
         { name: 'Início', sectionId: 'home'},
         { name: 'Calculadora', sectionId: 'calculator'},
         { name: 'Informações', sectionId: 'info'},
-        { name: 'Referências', sectionId: 'ref'}
     ];
 
     return(
