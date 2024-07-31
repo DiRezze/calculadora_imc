@@ -6,24 +6,17 @@
   --tertiary-color: #9971d3;
   --main-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color))
 }
-
-#home{
-  padding: 4.5rem 0 3rem 0;
-  background: var(--main-gradient);
-}
-.container-fluid, .navbar{
-  position: fixed !important;
-  top: 0;
-  padding: 0 !important;
-  flex-wrap: nowrap !important;
-}
 .nav-item{
+  color: #333;
   cursor: pointer;
-  white-space: nowrap;
-  height: 100%;
+  font-weight: 400;
+  border-radius: 6px;
 }
 .nav-item:hover{
-  background-color: #e6e6e6;
+  color: #111;
+}
+.align-self-bottom{
+  margin-top: auto;
 }
 .custom-nav {
   display: flex;
@@ -38,7 +31,29 @@
   justify-content: space-between;
   align-items: center;
 }
+.nav-container{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: left;
+  align-items: center;
+  height: 40px;
+  backdrop-filter: blur(12px) saturate(150%);
+  position: fixed;
+  border-bottom: #33333311 1px solid;
+  z-index: 999;
+}
+.nav-fluid{
+  display: flex;
+  flex-flow: row nowrap;
+  max-height: 40px;
+  align-items: center;
+  justify-content: left;
+}
 /*Header CSS*/
+#home{
+  padding: 4.5rem 0 3rem 0;
+  background: var(--main-gradient);
+}
 .main-title, .home-question{
   color: white;
 }

@@ -14,7 +14,7 @@ const Information = ( ) =>{
                     <button 
                     onClick={( ) => scrollTo('calculator')} 
                     type="button" 
-                    className="btn btn-primary btn-lg"
+                    className="btn btn-primary btn-lg align-self-bottom"
                 >
                     Descubra o seu
                 </button>
@@ -24,13 +24,6 @@ const Information = ( ) =>{
                     <p>
                         Embora o IMC seja uma medida prática e fácil de calcular, ele não leva em consideração a composição corporal, como a quantidade de massa muscular versus gordura. Portanto, pode não refletir com precisão a saúde de todos os indivíduos, especialmente aqueles com composição corporal atípica. Inclusive praticantes de atividades física plenamente saudáveis.
                     </p>
-                    <button 
-                    onClick={( ) => scrollTo('calculator')} 
-                    type="button" 
-                    className="btn btn-primary btn-lg"
-                >
-                    Descubra o seu
-                </button>
                 </div>
             </div>
         </section>

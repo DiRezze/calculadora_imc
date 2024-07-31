@@ -15,7 +15,7 @@ const NavLinks: React.FC = () =>{
     return(
         <ul className="navbar-nav custom-nav me-auto mb-2 mb-lg-0">
             {links.map(link=>(
-                <li key={link.sectionId} onClick={( ) => scrollTo(link.sectionId)} className="nav-item">
+                <li key={link.sectionId} onClick={( ) => scrollTo(link.sectionId)} className="nav-item ms-3">
                     <span className="nav-link">
                         {link.name}
                     </span>
@@ -46,11 +46,11 @@ const DynamicNav: React.FC = ( ) =>{
     },[]);
 
     return(
-        <nav className="navbar navbar-expand-lg bg-body-tertiary flex-nowrap nav-container">
-            <div className="container-fluid">
+        <nav className="nav-container">
+            <div className="nav-fluid">
                 {viewWidth >= 450 ?(
                     <>
-                        <FaCalculator />
+                        <FaCalculator className="ms-3 me-3" />
                         <NavLinks />
                     </>
                 ):(
