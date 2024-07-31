@@ -6,7 +6,7 @@ import { calculateBMI, getValue } from "../script/calculator";
 const CalculatorApp: React.FC = () =>{
 
     const [bmi, setBmi] = useState<number|null>(null);
-    const [height, setHeight] = useState<number>(1.50);
+    const [weight, setWeight] = useState<number>(1.50);
     const [gender, setGender] = useState<string>('');
     const resultsRef = useRef<HTMLDivElement>(null);
 
@@ -18,9 +18,10 @@ const CalculatorApp: React.FC = () =>{
         const genderValue = selectedGender ? selectedGender.id : '';
 
         const calculatedBmi = calculateBMI();
-        const userHeight = getValue('heightInput');
-        if(userHeight){
-            setHeight(userHeight);
+        const userWeight = getValue('heightInput');
+
+        if(userWeight){
+            setWeight(userWeight);
         }
 
         setBmi(calculatedBmi);
@@ -93,7 +94,7 @@ const CalculatorApp: React.FC = () =>{
                 </div>
             </div>
             <div ref={resultsRef}>
-                {bmi !== null && <Results bmi={bmi} gender={gender} height={height} />}
+                {bmi !== null && <Results bmi={bmi} gender={gender} weight={weight} />}
             </div>
         </section>
     )
