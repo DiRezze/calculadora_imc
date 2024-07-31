@@ -1,4 +1,4 @@
-function getValue(inputId:string): number | null{
+export function getValue(inputId:string): number | null{
 
     const inputField = document.getElementById(inputId) as HTMLInputElement | null;
     

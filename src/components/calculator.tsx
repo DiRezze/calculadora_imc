@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import sideImage from "../assets/sideImage.svg"
 import Results from "./results";
-import { calculateBMI } from "../script/calculator";
+import { calculateBMI, getValue } from "../script/calculator";
 
 const CalculatorApp: React.FC = () =>{
 
     const [bmi, setBmi] = useState<number|null>(null);
+    const [height, setHeight] = useState<number>(1.50);
     const [gender, setGender] = useState<string>('');
     const resultsRef = useRef<HTMLDivElement>(null);
 
@@ -17,6 +18,10 @@ const CalculatorApp: React.FC = () =>{
         const genderValue = selectedGender ? selectedGender.id : '';
 
         const calculatedBmi = calculateBMI();
+        const userHeight = getValue('heightInput');
+        if(userHeight){
+            setHeight(userHeight);
+        }
 
         setBmi(calculatedBmi);
         setGender(genderValue === 'radioMasc' ? 'Masculino' : 'Feminino');
@@ -88,7 +93,7 @@ const CalculatorApp: React.FC = () =>{
                 </div>
             </div>
             <div ref={resultsRef}>
-                {bmi !== null && <Results bmi={bmi} gender={gender} />}
+                {bmi !== null && <Results bmi={bmi} gender={gender} height={height} />}
             </div>
         </section>
     )
