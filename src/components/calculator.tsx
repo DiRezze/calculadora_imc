@@ -25,7 +25,7 @@ const CalculatorApp: React.FC = () =>{
         }
 
         setBmi(calculatedBmi);
-        setGender(genderValue === 'radioMasc' ? 'Masculino' : 'Feminino');
+        setGender(genderValue === 'radioMasc' ? 'masculino' : 'feminino');
 
         if (resultsRef.current) {
             resultsRef.current.scrollIntoView({ behavior: 'smooth' });
