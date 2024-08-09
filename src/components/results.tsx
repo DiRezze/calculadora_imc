@@ -1,6 +1,5 @@
 import { classifyBMI } from "../script/classifyBMI";
 import { scrollTo } from "../script/scrollTo";
-import { scrollTo } from "../script/scrollTo";
 
 interface ResultsProps {
     bmi: number;
