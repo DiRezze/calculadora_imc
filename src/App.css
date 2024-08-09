@@ -68,6 +68,9 @@
 .home-question:hover{
   transform: scale(1.01);
 }
+.align-center{
+  align-items: center;
+}
 
 /*Calculator & Results*/
 .calculator-container{
