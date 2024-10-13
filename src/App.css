@@ -6,6 +6,9 @@
   --tertiary-color: #9971d3;
   --main-gradient: linear-gradient(to right, var(--primary-color), var(--secondary-color))
 }
+html{
+  scroll-margin-top: 64px;
+}
 .nav-item{
   color: #333;
   cursor: pointer;
@@ -142,4 +145,7 @@ button.submit-calculator{
 }
 .github-link{
   align-items: center;
+}
+.link-text{
+  padding-left: 4px;
 }
