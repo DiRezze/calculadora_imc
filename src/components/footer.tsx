@@ -7,7 +7,7 @@ const Footer = () =>{
                 <a href="https://github.com/DiRezze" target="_blank" title="Meu perfil no GitHub">
                     <div className="github-link d-flex">
                         <FaGithub />
-                        <span>@DiRezze on GitHub</span>
+                        <span className="link-text">@DiRezze on GitHub</span>
                     </div>
                 </a>
                 <span>
